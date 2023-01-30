@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #ffb900;
+    --font-heading: "Sen", sans-serif;
+}
 html {
     font-size: 62.5%;
 }
@@ -40,6 +44,7 @@ a {
     background: #fffcf4;
     position: sticky;
     top: -28px;
+    z-index: 1;
 }
 .header-fixed .body {
     padding: 36px 0 8px;
@@ -163,7 +168,7 @@ a {
 
 .hero .info .heading {
     width: 470px;
-    font-family: "Sen", sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 5.6rem;
     line-height: 1.17;
@@ -188,7 +193,7 @@ a {
     padding: 17px 34px;
     min-width: 180px;
     min-height: 64px;
-    background: #ffb900;
+    background: var(--primary-color);
     border-radius: 32px;
 }
 
@@ -228,7 +233,7 @@ a {
 }
 
 .content-block .qty-desc strong {
-    font-family: "Sen";
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 4.4rem;
     color: #171100;
