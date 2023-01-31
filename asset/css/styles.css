@@ -38,6 +38,24 @@ a {
     color: #ffffff;
     background: #171100;
 }
+
+.heading {
+    width: 470px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.heading.lv1 {
+    font-size: 5.6rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
 /* ========= Header ========= */
 
 .header-fixed {
@@ -101,8 +119,7 @@ a {
 /* ========= Hero ========= */
 
 .hero {
-    padding-top: 56px;
-    height: calc(100vh - 94px);
+    padding: 56px 0 65px;
     background: #fffcf4;
 }
 .hero .body {
@@ -114,6 +131,7 @@ a {
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
+    display: block;
 }
 
 .hero .media-block {
@@ -166,16 +184,6 @@ a {
     align-items: center;
 }
 
-.hero .info .heading {
-    width: 470px;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 5.6rem;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-    color: #171100;
-}
-
 .content-block .desc {
     margin-top: 22px;
     font-weight: 400;
@@ -200,9 +208,10 @@ a {
 .content-block .watch-video {
     margin-left: 28px;
     display: flex;
+    align-items: center;
     background: none;
     border: none;
-    align-items: center;
+    cursor: pointer;
 }
 
 .content-block .watch-video .icon {
@@ -240,4 +249,131 @@ a {
 }
 .content-block .qty-desc strong:nth-child(2) {
     margin-left: 28px;
+}
+
+/* ==========Popular============ */
+/* popular top */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.popular-top .control-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.popular-top .desc {
+    width: 458px;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+/* Course */
+
+.course-list {
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.course-item {
+    background: #ffffff;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+.course-list .course-item .thumb {
+    width: 370px;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.course-item .info .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.course-item .info .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-item .head .rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.course-item .head .value {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fea31b;
+}
+
+.course-item .info .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.course-item .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-item .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+}
+
+.course-item .foot .btn {
+    width: 118px;
+    height: 50px;
+}
+
+.course-item .foot .btn:hover {
+    cursor: pointer;
+    border: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
 }
