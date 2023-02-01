@@ -16,7 +16,16 @@ body {
 }
 
 /* ========= Commons ========= */
+.break-all {
+    word-break: break-all;
+}
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 a {
     text-decoration: none;
 }
@@ -301,11 +310,11 @@ a {
 .course-list {
     margin-top: 55px;
     display: flex;
-    justify-content: space-between;
     gap: 30px;
 }
 
 .course-item {
+    flex: 1;
     background: #ffffff;
     border: 1px solid #e2dfda;
     border-radius: 12px;
@@ -329,6 +338,7 @@ a {
 }
 
 .course-item .info .title {
+    padding-right: 6px;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
@@ -385,4 +395,82 @@ a {
 .course-item .foot .btn:hover {
     cursor: pointer;
     background: var(--primary-color);
+}
+
+/* ========= Feedback ========== */
+
+.feedback {
+    padding: 96px 0px;
+    margin-top: 135px;
+    background: #2e2100;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+.feedback-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.feedback-item .info {
+    width: 34%;
+}
+.feedback-item .avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback-item .title {
+    margin-top: 18px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    color: #f7f7f7;
+}
+
+.feedback-item .desc {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #bfbcb3;
+}
+
+.feedback-item .dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+}
+.feedback-item .dot {
+    cursor: pointer;
+    margin-top: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+}
+
+.feedback-item .dot.active {
+    cursor: default;
+    background: #ffb900;
+}
+
+.feedback-item .content {
+    width: 66%;
+}
+.feedback-item blockquote {
+    margin-left: auto;
+    padding-left: 30px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #ffffff;
 }
