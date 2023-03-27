@@ -14,8 +14,21 @@
             href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap"
             rel="stylesheet"
         />
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <!-- intenal fonts -->
         <link rel="stylesheet" href="./asset/fonts/stylesheet.css" />
+        <!-- Ionicons -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <!-- Grid -->
+        <link rel="stylesheet" href="./asset/css/grid.css" />
         <!-- external css -->
         <link rel="stylesheet" href="./asset/css/styles.css" />
     </head>
@@ -23,7 +36,7 @@
         <main>
             <!-- Header -->
             <header class="header-fixed">
-                <div class="main-content">
+                <div class="wide">
                     <div class="body">
                         <!-- logo -->
                         <a href="#">
@@ -34,70 +47,89 @@
                             <ul>
                                 <li class="active"><a href="#">Home</a></li>
                                 <li><a href="#course">Courses</a></li>
-                                <li><a href="#pricing">Pricing</a></li>
-                                <li><a href="#review">Reviews</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#blog">Blogs</a></li>
                             </ul>
                         </nav>
                         <!-- actions -->
                         <div class="action">
                             <a href="#!" class="btn">Sign Up</a>
                         </div>
+                        <ion-icon
+                            id="open-menu"
+                            class="icon-open"
+                            name="grid-outline"
+                        ></ion-icon>
+                        <ul class="menu-toggle">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#course">Courses</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#blog">Blogs</a></li>
+                            <a href="#!" class="btn">Sign Up</a>
+                            <ion-icon
+                                id="close-menu"
+                                class="icon-close"
+                                name="caret-up-circle-outline"
+                            ></ion-icon>
+                        </ul>
                     </div>
                 </div>
             </header>
 
             <!-- Hero -->
             <div class="hero">
-                <div class="main-content">
-                    <div class="body">
-                        <div class="media-block">
-                            <!-- image -->
-                            <img
-                                src="./asset/img/hero-img.png"
-                                alt="Teacher"
-                                class="img-hero"
-                            />
-                            <div class="hero-sumary">
-                                <div class="item">
-                                    <div class="icon">
-                                        <img
-                                            src="./asset/icons/icon-1.svg"
-                                            alt="Icon-1"
-                                        />
+                <div class="wide">
+                    <div class="row body">
+                        <div class="col col-xl-6 col-md-12 col-sm-12 col-ss-12">
+                            <div class="media-block">
+                                <!-- image -->
+                                <img
+                                    src="./asset/img/hero-img.png"
+                                    alt="Teacher"
+                                    class="img-hero"
+                                />
+                                <div class="hero-sumary">
+                                    <div class="item">
+                                        <div class="icon">
+                                            <img
+                                                src="./asset/icons/icon-1.svg"
+                                                alt="Icon-1"
+                                            />
+                                        </div>
+                                        <div class="info">
+                                            <p class="lable">20 Courses</p>
+                                            <p class="title">UI/UX Design</p>
+                                        </div>
                                     </div>
-                                    <div class="info">
-                                        <p class="lable">20 Courses</p>
-                                        <p class="title">UI/UX Design</p>
+                                    <div class="item">
+                                        <div class="icon">
+                                            <img
+                                                src="./asset/icons/icon-2.svg"
+                                                alt="Icon-1"
+                                            />
+                                        </div>
+                                        <div class="info">
+                                            <p class="lable">20 Courses</p>
+                                            <p class="title">Development</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="icon">
-                                        <img
-                                            src="./asset/icons/icon-2.svg"
-                                            alt="Icon-1"
-                                        />
-                                    </div>
-                                    <div class="info">
-                                        <p class="lable">20 Courses</p>
-                                        <p class="title">Development</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="icon">
-                                        <img
-                                            src="./asset/icons/icon-3.svg"
-                                            alt="Icon-1"
-                                        />
-                                    </div>
-                                    <div class="info">
-                                        <p class="lable">30 Courses</p>
-                                        <p class="title">Marketing</p>
+                                    <div class="item">
+                                        <div class="icon">
+                                            <img
+                                                src="./asset/icons/icon-3.svg"
+                                                alt="Icon-1"
+                                            />
+                                        </div>
+                                        <div class="info">
+                                            <p class="lable">30 Courses</p>
+                                            <p class="title">Marketing</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="content-block">
-                            <div class="info">
+                        <div class="col col-xl-6 col-md-12 col-sm-12 col-ss-12">
+                            <div class="info-content">
                                 <h1 class="heading lv1">
                                     Learn without limits and spread knowledge.
                                 </h1>
@@ -120,11 +152,15 @@
                                         <span>Watch Video</span>
                                     </button>
                                 </div>
-                                <p class="desc sub-desc">Recent engagement</p>
-                                <p class="desc qty-desc">
-                                    <strong>50K </strong> Students
-                                    <strong>70+ </strong> Courses
-                                </p>
+                                <p class="sub-desc">Recent engagement</p>
+                                <div class="desc-block">
+                                    <p class="qty-desc">
+                                        <strong>50K </strong> Students
+                                    </p>
+                                    <p class="qty-desc">
+                                        <strong>70+ </strong> Courses
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,7 +169,7 @@
 
             <!-- Popular -->
             <div class="popular" id="course">
-                <div class="main-content">
+                <div class="wide">
                     <!-- popular top -->
                     <div class="popular-top">
                         <div class="info">
@@ -143,157 +179,136 @@
                                 shine for the next future career.
                             </p>
                         </div>
-                        <div class="controls">
-                            <button class="control-btn">
-                                <svg
-                                    width="8"
-                                    height="14"
-                                    viewBox="0 0 8 14"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M7 1L1 7L7 13"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </button>
-                            <button class="control-btn">
-                                <svg
-                                    width="8"
-                                    height="14"
-                                    viewBox="0 0 8 14"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M1 1L7 7L1 13"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
+                        <div class="controls"></div>
                     </div>
                     <!-- course list -->
-                    <div class="course-list">
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./asset/img/course-1.png"
-                                    alt="Course-1"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <a href="#!">
-                                        <h3 class="title line-clamp break-all">
-                                            Basic web design
-                                        </h3>
-                                    </a>
-                                    <div class="rating">
-                                        <img
-                                            src="./asset/icons/star.svg"
-                                            alt="Stars"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
+                    <div class="course-list row">
+                        <div class="col col-xl-4 col-md-6 col-sm-6 col-ss-12">
+                            <div class="course-item">
+                                <a href="#!">
+                                    <img
+                                        src="./asset/img/course-1.png"
+                                        alt="Course-1"
+                                        class="thumb"
+                                    />
+                                </a>
+                                <div class="info">
+                                    <div class="head">
+                                        <a href="#!">
+                                            <h3
+                                                class="title line-clamp break-all"
+                                            >
+                                                Basic web design
+                                            </h3>
+                                        </a>
+                                        <div class="rating">
+                                            <img
+                                                src="./asset/icons/star.svg"
+                                                alt="Stars"
+                                                class="star"
+                                            />
+                                            <span class="value">4.5</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <p
-                                    class="desc line-clamp break-all"
-                                    style="--line-clamp: 2"
-                                >
-                                    Get the best course, gain knowledge and
-                                    shine for your future career.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span
-                                    ><button class="btn book-btn">
-                                        Book Now
-                                    </button>
+                                    <p
+                                        class="desc line-clamp break-all"
+                                        style="--line-clamp: 2"
+                                    >
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="foot">
+                                        <span class="price">$120.75</span
+                                        ><button class="btn book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./asset/img/course-2.png"
-                                    alt="Course-2"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <a href="#!">
-                                        <h3 class="title line-clamp break-all">
-                                            UI/UX design
-                                        </h3>
-                                    </a>
-                                    <div class="rating">
-                                        <img
-                                            src="./asset/icons/star.svg"
-                                            alt="Stars"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
+                        <div class="col col-xl-4 col-md-6 col-sm-6 col-ss-12">
+                            <div class="course-item">
+                                <a href="#!">
+                                    <img
+                                        src="./asset/img/course-2.png"
+                                        alt="Course-2"
+                                        class="thumb"
+                                    />
+                                </a>
+                                <div class="info">
+                                    <div class="head">
+                                        <a href="#!">
+                                            <h3
+                                                class="title line-clamp break-all"
+                                            >
+                                                UI/UX design
+                                            </h3>
+                                        </a>
+                                        <div class="rating">
+                                            <img
+                                                src="./asset/icons/star.svg"
+                                                alt="Stars"
+                                                class="star"
+                                            />
+                                            <span class="value">4.5</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <p
-                                    class="desc line-clamp break-all"
-                                    style="--line-clamp: 2"
-                                >
-                                    Get the best course, gain knowledge and
-                                    shine for your future career.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span
-                                    ><button class="btn book-btn">
-                                        Book Now
-                                    </button>
+                                    <p
+                                        class="desc line-clamp break-all"
+                                        style="--line-clamp: 2"
+                                    >
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="foot">
+                                        <span class="price">$120.75</span
+                                        ><button class="btn book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="course-item">
-                            <a href="#!">
-                                <img
-                                    src="./asset/img/course-3.png"
-                                    alt="Course-3"
-                                    class="thumb"
-                                />
-                            </a>
-                            <div class="info">
-                                <div class="head">
-                                    <a href="#!">
-                                        <h3 class="title line-clamp break-all">
-                                            Web App design
-                                        </h3>
-                                    </a>
-                                    <div class="rating">
-                                        <img
-                                            src="./asset/icons/star.svg"
-                                            alt="Stars"
-                                            class="star"
-                                        />
-                                        <span class="value">4.5</span>
+                        <div class="col col-xl-4 col-md-6 col-sm-6 col-ss-12">
+                            <div class="course-item">
+                                <a href="#!">
+                                    <img
+                                        src="./asset/img/course-3.png"
+                                        alt="Course-3"
+                                        class="thumb"
+                                    />
+                                </a>
+                                <div class="info">
+                                    <div class="head">
+                                        <a href="#!">
+                                            <h3
+                                                class="title line-clamp break-all"
+                                            >
+                                                Web App design
+                                            </h3>
+                                        </a>
+                                        <div class="rating">
+                                            <img
+                                                src="./asset/icons/star.svg"
+                                                alt="Stars"
+                                                class="star"
+                                            />
+                                            <span class="value">4.5</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <p
-                                    class="desc line-clamp break-all"
-                                    style="--line-clamp: 2"
-                                >
-                                    Get the best course, gain knowledge and
-                                    shine for your future career.
-                                </p>
-                                <div class="foot">
-                                    <span class="price">$120.75</span
-                                    ><button class="btn book-btn">
-                                        Book Now
-                                    </button>
+                                    <p
+                                        class="desc line-clamp break-all"
+                                        style="--line-clamp: 2"
+                                    >
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="foot">
+                                        <span class="price">$120.75</span
+                                        ><button class="btn book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -302,8 +317,8 @@
             </div>
 
             <!-- Feedback -->
-            <div class="feedback">
-                <div class="main-content">
+            <div class="feedback" id="feedback">
+                <div class="wide">
                     <div class="feedback-list">
                         <!-- feedback item 1 -->
                         <div class="feedback-item">
@@ -418,8 +433,8 @@
             </div>
 
             <!-- Features 1 -->
-            <div class="features" id="pricing">
-                <div class="main-content">
+            <div class="features" id="features">
+                <div class="wide">
                     <div class="body">
                         <div class="images">
                             <img
@@ -449,10 +464,11 @@
             </div>
             <!-- Features 2 -->
             <div class="features features-2nd">
-                <div class="main-content">
+                <div class="wide">
                     <div class="body">
                         <div class="images">
                             <img
+                                class="img-featured-2"
                                 src="./asset/img/feature-3.png"
                                 alt="Feature-3-img"
                             />
@@ -474,10 +490,10 @@
             </div>
 
             <!-- Blogs -->
-            <div class="blog" id="review">
-                <div class="main-content">
+            <div class="blog" id="blog">
+                <div class="wide">
                     <div class="blog-top">
-                        <h2 class="heading lv2">Our blog</h2>
+                        <h2 class="heading lv2">Our blogs</h2>
                         <p class="desc">
                             Read our regular travel blog and know the latest
                             update of tour and travel
@@ -762,5 +778,42 @@
                 </div>
             </div>
         </main>
+        <script>
+            // Open close menu
+            var vOpenMenuIcon = document.querySelector("#open-menu");
+            var vCloseMenuIcon = document.querySelector("#close-menu");
+            var vMenuNavbar = document.querySelector(".menu-toggle");
+            vOpenMenuIcon.addEventListener("click", function (event) {
+                vMenuNavbar.classList.toggle("open");
+            });
+            vCloseMenuIcon.addEventListener("click", function (event) {
+                vMenuNavbar.classList.toggle("open");
+            });
+
+            // Auto scroll blogs
+            var vBlogItems = document.querySelectorAll(".blog-list .item");
+            var vStranslate = 0;
+            const blog1 = setInterval(function () {
+                vStranslate = vStranslate + 100;
+                if (vStranslate > 500) {
+                    vStranslate = 0;
+                }
+                for (let i = 0; i < vBlogItems.length; i++) {
+                    vBlogItems[
+                        i
+                    ].style.transform = `translateX(-${vStranslate}%)`;
+                }
+                blog1;
+            }, 3000);
+
+            // using Jquery to navtigation
+            $(document).on("click", ".header-fixed li a", function () {
+                var vListMenu = $(".header-fixed li").removeClass("active");
+                var vHref = $(this).attr("href");
+                var vLiSelected = $(`a[href$='${vHref}']`)
+                    .closest("li")
+                    .addClass("active");
+            });
+        </script>
     </body>
 </html>
